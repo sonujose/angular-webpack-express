@@ -1,0 +1,14 @@
+/* Variables */
+$colorFacebook: #3b5998;
+
+/* Mixins */
+@mixin fullFit($position: null) {
+  @if ($position) {
+    position: $position;
+    left: 0;
+    top: 0;
+    z-index: 100;
+  }
+  width: 100%;
+  height: 100%;
+}

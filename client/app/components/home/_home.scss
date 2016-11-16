@@ -1,0 +1,30 @@
+.home-container {
+    padding: 1px;
+}
+.hero-banner {
+    .hero-image {
+        width: 100%;
+    }
+}
+.featured-bg {
+    &-image {
+        width: 100%;
+    }
+}
+.featured-card {
+    padding: 1rem;
+
+    &-leftrsc {
+        width: 50%;
+        &-img {
+            padding: 1px;
+        }
+    }
+
+    &-rightrsc {
+        width: 50%;
+    }
+}
+.content-bg-image {
+    width: 100%;
+}

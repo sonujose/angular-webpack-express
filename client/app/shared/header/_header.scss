@@ -1,0 +1,29 @@
+.header {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    border: none;
+    height: 3rem;
+
+    .navbar-brand {
+        display: flex;
+    }
+    
+    .navbar-nav-link {
+        text-decoration: none;
+    }
+
+    .logo-container {
+        text-decoration: none;
+    }
+    
+    .master-title {
+        margin-left: 7px;
+        display: inline-block;
+        text-decoration: none;
+        color: #F2671D;
+        &:hover {
+            color:#F2671D;
+        }
+    }
+}
