@@ -1,0 +1,45 @@
+<div class="home-view">
+    <div class="home-container">
+        <div class="hero-banner">
+            <img class="hero-image" src="/client/app/shared/Assets/clients-hero.jpg">
+        </div>
+    </div>
+    <div class="featured-content">
+        <div class="featured-card">
+            <img class="featured-bg-image" src="/client/app/shared/Assets/Category-Neutral.svg">
+            <div class="container main-content">
+                <h2>Rendering of dynamic objects</h2>
+                <div style="margin-bottom: 1rem">Options</div>
+                <div style="height:auto; border: 1px solid #ddd; width: 35rem">
+                    <span>{{tet}}</span>
+                    <div style="margin-bottom: 1rem; padding: 5px 10px" ng-repeat="option in optionsList">
+                        <div ng-switch on="option.type">
+                            <div ng-switch-when="check">
+                                <input type="checkbox">
+                                <span>{{option.content}}</span>
+                            </div>
+                            <div ng-switch-when="numeric">
+                                <span>{{option.content}}:</span>
+                                <input type="number" ng-if="option.value" ng-value="option.value">
+                                <input type="number" ng-if="!option.value" ng-value="option.value">
+                            </div>
+                            <div ng-switch-when="textbox">
+                                <span>{{option.content}}:</span>
+                                <input type="text">
+                            </div>
+                            <div ng-switch-when="dropdown">
+                                <span>dropdown options</span>
+                                <select ng-model="option.model">
+                        <option ng-repeat="item in option.availableOptions">{{item.value}}</option>
+                    </select>
+                            </div>
+                            <div ng-switch-when="text">
+                                <p>{{option.content}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
