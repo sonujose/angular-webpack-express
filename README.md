@@ -1,5 +1,5 @@
 # AngularJS Node js full stack kit
-**(Gulp, Browserify, Sass)**  
+**(Webpack, Gulp, Sass)**  
 
 It is a seed project for AngularJS web application which objects is:
 - Organize all assets with gulp browserify and sass;
