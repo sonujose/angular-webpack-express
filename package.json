@@ -4,7 +4,7 @@
   "description": "Angular nodejs fullstack",
   "scripts": {
     "postinstall": "bower install",
-    "start": "gulp"
+    "start": "webpack && gulp"
   },
   "author": "sonu Jose",
   "license": "MIT",
@@ -19,8 +19,10 @@
     "gulp-util": "^3.0.6"
   },
   "devDependencies": {
+    "awesome-typescript-loader": "^2.2.4",
     "browserify": "^10.2.0",
     "debowerify": "^1.2.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "gulp": "^3.8.11",
     "gulp-angular-templatecache": "^1.8.0",
     "gulp-autoprefixer": "^2.3.0",
@@ -32,8 +34,16 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.4",
     "node-notifier": "^4.2.1",
+    "node-sass": "^3.13.0",
     "q": "^1.4.1",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.2",
+    "source-map-loader": "^0.1.5",
+    "style-loader": "^0.13.1",
+    "typescript": "^2.0.10",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   }
 }
