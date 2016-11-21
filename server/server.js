@@ -15,6 +15,6 @@ app.use(bodyParser.json());
 
 require('./routes')(app);
 
-app.listen(8080);
+app.listen(9000);
 
-//console.log("Server listening on port 9000, go to http://localhost:9000 ");
+console.log("Server listening on port 9000, go to http://localhost:9000 ");

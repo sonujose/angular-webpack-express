@@ -1,6 +1,8 @@
 (function () {
   'use strict';
 
+  
+
   angular.module('App.components.about')
     .controller('about', function ($scope, dataService) {
       

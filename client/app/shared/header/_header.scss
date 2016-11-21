@@ -1,8 +1,9 @@
-.header {
+.app-header {
     background: #fff;
     width: 100%;
     border: none;
     height: 3rem;
+    position: absolute;
 
     .navbar-brand {
         display: flex;
