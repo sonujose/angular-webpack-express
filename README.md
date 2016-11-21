@@ -1,9 +1,5 @@
 # AngularJS Node js full stack kit
-<<<<<<< HEAD
 **(Webpack, gulp, Sass)**  
-=======
-**(Webpack, Gulp, Sass)**  
->>>>>>> 58a85443949d3f02137607bb73a94fa39d31d8e2
 
 It is a full stack project for AngularJS web application which objects is:
 - Organize all assets with gulp browserify and sass;
@@ -44,11 +40,7 @@ npm install
 ```
 npm install --global gulp webpack
 ```
-<<<<<<< HEAD
 6) Run Webpack and gulp
-=======
-6) Run application
->>>>>>> 58a85443949d3f02137607bb73a94fa39d31d8e2
 ```
 npm start
 ```
