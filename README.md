@@ -22,30 +22,20 @@ It is a full stack project for AngularJS web application which objects is:
 ```
 git clone https://github.com/sonujose/Angularjs-Nodejs-Express-Fullstack-solution.git
 ```
-2) Add your own repository (*optionally*)
-```
-rm -rf .git && git init && git add . && git commit -m "Init AngularJS Starter Kit"
-git remote add origin your_repository_here
-git push origin master
-```
-3) Install bower if you don't have it already
-```
-npm install --global bower
-```
-4) Install all npm and bower dependencies
+2) Install all npm and bower dependencies
 ```
 npm install
 ```
-5) Install gulp and webpack if you don't have it already.
+3) Install gulp and webpack if you don't have it already.
 ```
 npm install --global gulp webpack
 ```
-6) Run Webpack and gulp
+4) Run Webpack and gulp
 ```
 npm start
 ```
-7) Wait untill gulp do its job, ahd when you'll see the `Server listening on port 9000` line go to `http://localhost:9000`  
-8) Congratulations, you've just setup your angular application!
+5) Wait untill gulp do its job, ahd when you'll see the `Server listening on port 9000` line go to `http://localhost:9000`  
+6) Congratulations, you've just setup your angular application!
 
 ### Basic folder structure
 Some job for Captain Obvious
