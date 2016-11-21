@@ -2,8 +2,8 @@
 **(Webpack, gulp, Sass)**  
 
 It is a full stack project for AngularJS web application which objects is:
-- Organize all assets with gulp browserify and sass;
-- Provide easy to use extensibility with npm or bower package managers;
+- Organize all assets with webpack gulp and sass;
+- Provide easy to use extensibility with npm managers;
 - Create mockup server for your application;
 - Give the basic folders and modules structure of angular application;
 
