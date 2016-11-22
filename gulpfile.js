@@ -19,7 +19,7 @@
    */
   gulp.task('buildSass', function () {
     console.log('Building main sass');
-    gulp.src('./client/main.scss')
+    gulp.src('./client/styles/main.scss')
       .pipe(sourcemaps.init({loadMaps: true}))
       .pipe(sass().on('error', function (err) {
         gutil.log(gutil.colors.bgRed("Sass compile error"), gutil.colors.bgBlue(err.message));
@@ -36,7 +36,7 @@
    */
   gulp.task('buildSassVendor', function () {
     console.log('Building vendor sass');
-    gulp.src('./client/vendor.scss')
+    gulp.src('./client/styles/vendor.scss')
       .pipe(sass().on('error', function (err) {
         gutil.log(gutil.colors.bgRed("Sass compile error (vendor)"), gutil.colors.bgBlue(err.message));
         notifier.notify({title: "Sass compile error (vendor)", message: err.message });
