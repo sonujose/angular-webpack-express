@@ -77,9 +77,8 @@ It'll give you the picture of overall application structure.
 So basically: you have main angular file `client/app.modules.js`. It contains your main app which requires `components` and `shared` modules. Components modules contains all single components of your application (like pages for example or single use directives), and shared module contains all elements of your app which will be shared across different parts of your application (like header, footer, or any reusable elements).  
 The main point here is using modular structure so later you can just delete the folder with your module and it's gone from your app completely (with all its directives, services, styles and views). So yes, you must put all files related to the module in its own folder, even the scss.  
 ####2) How can I style my app  
-For styling you must use scss. The main entry for all your styles is `client/main.scss`, you can include in it all partials scss from your application. You must have two kinds of partial scss files.  
-First from `client/styles` folder - it'll contain scss partials with global styles for your app (settings, variables, mixins, forms, buttons, etc.).  
-And the second one - module partials: partials from different modules of your application (you can see one here `client/app/components/seed-help/_seed-help.scss`).  
+For styling you must use scss. The main entry for all your styles is `client/styles/app.scss`, you can include in it all partials scss from your application. You must have two kinds of partial scss files.  
+scss are organised as partials in the styles folder, containing partial folder for different types of styles , all those are imported in app.scss. Also styles for different components are put in their corresponding folders and are called from app.scss
 **note:** no need to write browser prefixes like `-webkit`, `-moz` or `-ms` it will be added automatically by `gulp-autoprefixer` for 2 latest versions of all major browsers (you can change this option in `gulpfile.js` - task `buildSass`).  
 ####3) How can I install extension
 To add an extension to your app you must install it either from `npm` or `bower`, then you just require it from `clinet/vendor.js`. 
