@@ -1,5 +1,5 @@
 # AngularJS Node js full stack kit
-**(Webpack, gulp, Sass)**  
+**(Webpack, Express, gulp, Sass)**  
 
 It is a full stack project for AngularJS web application which objects is:
 - Organize all assets with webpack gulp and sass;
@@ -22,7 +22,7 @@ It is a full stack project for AngularJS web application which objects is:
 ```
 git clone https://github.com/sonujose/Angularjs-Nodejs-Express-Fullstack-solution.git
 ```
-2) Install all npm and bower dependencies
+2) Install all npm dependencies
 ```
 npm install
 ```
