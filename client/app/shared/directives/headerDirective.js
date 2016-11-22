@@ -8,7 +8,7 @@
 
       return {
         restrict: 'E',
-        templateUrl: 'client/app/shared/header/headerTemplate.html',
+        templateUrl: 'client/app/shared/templates/headerTemplate.html',
         replace: true
       };
     });

@@ -9,7 +9,7 @@ module.exports = {
     'vendor': ['angular', 'angular-ui-router'],
     'app': ['./client/app/components/modules.js',
             './client/app/shared/modules.js',
-            './client/app/shared/header/headerDirective.js',
+            './client/app/shared/directives/headerDirective.js',
             './client/app/app.modules.js',
             './client/app/routes.js',
             './client/app/dataService.js']

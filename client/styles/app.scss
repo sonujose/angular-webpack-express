@@ -2,4 +2,5 @@
 /* Application scss */
 @import 'client/app/components/about/about';
 @import 'client/app/components/home/home';
-@import 'client/app/shared/header/header';
+@import 'config/module';
+@import 'component/module';
