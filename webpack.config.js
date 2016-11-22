@@ -7,9 +7,12 @@ module.exports = {
   debug: true,
   entry: {
     'vendor': './client/vendor.js',
-    'app': ['./client/app/components/modules.js','./client/app/shared/modules.js','./client/app/shared/header/headerDirective.js',
-      './client/app/app.modules.js','./client/app/routes.js','./client/app/dataService.js',
-      './client/app/components/about/aboutController.js', './client/app/components/home/homeController.js']
+    'app': ['./client/app/components/modules.js',
+            './client/app/shared/modules.js',
+            './client/app/shared/header/headerDirective.js',
+            './client/app/app.modules.js',
+            './client/app/routes.js',
+            './client/app/dataService.js']
   },
   resolve: {
     extensions: ['', '.ts', '.js']

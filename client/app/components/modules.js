@@ -1,8 +1,9 @@
+'use strict';
 
-angular.module('App.components', [
-  'App.components.home',
-  'App.components.about'
-]);
+var aboutController = require('./about/aboutController');
+var homeController = require('./home/homeController');
 
-angular.module('App.components.home', []);
-angular.module('App.components.about', []);
+angular.module('App.components', [])
+    .controller('HomeController', homeController)
+    .controller('AboutController', aboutController)
+    .name;

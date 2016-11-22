@@ -56,16 +56,20 @@
     });
   });
 
-//watch changes
-  gulp.task('watch', function () {
-    // need to add build app to build webpack app using webpack 
+/**
+ *TODO: need to add build watch using webpack for livereload after editing files  
+ *Currently commenting out gulp task for watch as it throws error on live reload
+*/
+
+  //watch changes
+  //gulp.task('watch', function () {    
     //gulp.watch(['./client/main.js', './client/app/**/*.js'], ['buildApp']);
     //gulp.watch(['./client/app/**/*.html'], ['buildApp']);
-    gulp.watch(['./client/main.scss', './client/styles/*.scss', './client/app/**/*.scss'], ['buildSass']);
-    gulp.watch('./client/vendor.scss', ['buildSassVendor']);
-  });
+    //gulp.watch(['./client/main.scss', './client/styles/*.scss', './client/app/**/*.scss'], ['buildSass']);
+    //gulp.watch('./client/vendor.scss', ['buildSassVendor']);
+  //});
 
   // Default Gulp Task
-  gulp.task('default', ['buildSass', 'buildSassVendor', 'watch', 'startServer']);
+  gulp.task('default', ['buildSass', 'buildSassVendor', 'startServer']);
 
 }());

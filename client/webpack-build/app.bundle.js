@@ -45,8 +45,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	__webpack_require__(2);
-	__webpack_require__(3);
 	__webpack_require__(4);
 	__webpack_require__(5);
 	__webpack_require__(6);
@@ -56,19 +54,94 @@
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
 	
-	angular.module('App.components', [
-	  'App.components.home',
-	  'App.components.about'
-	]);
+	var aboutController = __webpack_require__(2);
+	var homeController = __webpack_require__(3);
 	
-	angular.module('App.components.home', []);
-	angular.module('App.components.about', []);
+	angular.module('App.components', [])
+	    .controller('HomeController', homeController)
+	    .controller('AboutController', aboutController)
+	    .name;
+
 
 /***/ },
 /* 2 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	AboutController.$inject = ['$scope', 'dataService'];
+	
+	function AboutController($scope, dataService) {
+	    $scope.currentState = "about-controller";
+	    dataService.getDetails().then(function(res) {
+	            $scope.text = res.data;
+	        }, function(error) {
+	            $scope.error = error;
+	        });
+	}
+	module.exports = AboutController;
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	HomeController.$inject = ['$scope', 'dataService'];
+	
+	function HomeController($scope, dataService) {
+	    $scope.currentState = "about-controller";
+	    $scope.text = 'Lorem ipsum';
+	    $scope.optionsList = [
+	        {
+	            type: 'check',
+	            content: 'Check this item to enable this feature'
+	        },
+	        {
+	            type: 'check',
+	            content: 'Check to specify a custom URl'
+	        },
+	        {
+	            type: 'numeric',
+	            value: '3000',
+	            content: 'Server flags'
+	        },
+	        {
+	            type: 'numeric',
+	            content: 'category flags'
+	        },
+	        {
+	            type: 'textbox',
+	            content: 'Name'
+	        },
+	        {
+	            type: 'textbox',
+	            content: 'Path'
+	        },
+	        {
+	            type: 'dropdown',
+	            availableOptions: [
+	                { id: 1, value: 'Disable offline mode' },
+	                { id: 1, value: 'Disable online mode' },
+	                { id: 1, value: 'Office hours' }
+	            ],
+	            model: null
+	        },
+	        {
+	            type: 'text',
+	            content: 'Registry keys used to track document reviews will be reused when necessary'
+	        },
+	    ];
+	}
+	module.exports = HomeController;
+
+/***/ },
+/* 4 */
 /***/ function(module, exports) {
 
 	angular.module('App.shared', [
@@ -78,7 +151,7 @@
 	angular.module('App.shared.header', []);
 
 /***/ },
-/* 3 */
+/* 5 */
 /***/ function(module, exports) {
 
 	(function () {
@@ -97,7 +170,7 @@
 	}());
 
 /***/ },
-/* 4 */
+/* 6 */
 /***/ function(module, exports) {
 
 	(function () {
@@ -112,7 +185,7 @@
 	}());
 
 /***/ },
-/* 5 */
+/* 7 */
 /***/ function(module, exports) {
 
 	(function () {
@@ -126,12 +199,12 @@
 	      $stateProvider
 	        .state('home', {
 	          templateUrl: 'client/app/components/home/home.html',
-	          controller: 'home',
+	          controller: 'HomeController',
 	          url: '/home'
 	        })
 	        .state('about', {
 	          templateUrl: 'client/app/components/about/about.html',
-	          controller: 'about',
+	          controller: 'AboutController',
 	          url: '/about'
 	        });
 	    });
@@ -139,7 +212,7 @@
 	}());
 
 /***/ },
-/* 6 */
+/* 8 */
 /***/ function(module, exports) {
 
 	(function () {
@@ -163,81 +236,6 @@
 	    });
 	
 	}());
-
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
-
-	(function () {
-	  'use strict';
-	
-	  
-	
-	  angular.module('App.components.about')
-	    .controller('about', function ($scope, dataService) {
-	      
-	        dataService.getDetails().then(function(res) {
-	            $scope.text = res.data;
-	        }, function(error) {
-	            $scope.error = error;
-	        });
-	        
-	      });
-	}());
-
-/***/ },
-/* 8 */
-/***/ function(module, exports) {
-
-	(function () {
-	    'use strict';
-	
-	    angular.module('App.components.home')
-	        .controller('home', function ($scope) {
-	            $scope.text = 'Lorem ipsum';
-	            $scope.optionsList = [
-	                {
-	                    type: 'check',
-	                    content: 'Check this item to enable this feature'
-	                },
-	                {
-	                    type: 'check',
-	                    content: 'Check to specify a custom URl'
-	                },
-	                {
-	                    type: 'numeric',
-	                    value: '3000',
-	                    content: 'Server flags'
-	                },
-	                {
-	                    type: 'numeric',
-	                    content: 'category flags'
-	                },
-	                {
-	                    type: 'textbox',
-	                    content: 'Name'
-	                },
-	                {
-	                    type: 'textbox',
-	                    content: 'Path'
-	                },
-	                {
-	                    type: 'dropdown',
-	                    availableOptions: [
-	                        { id: 1, value: 'Disable offline mode' },
-	                        { id: 1, value: 'Disable online mode' },
-	                        { id: 1, value: 'Office hours' }
-	                    ],
-	                    model: null
-	                },
-	                {
-	                    type: 'text',
-	                    content: 'Registry keys used to track document reviews will be reused when necessary'
-	                },
-	            ];
-	        });
-	
-	} ());
 
 /***/ }
 /******/ ]);

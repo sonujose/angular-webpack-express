@@ -1,16 +1,13 @@
-(function () {
-  'use strict';
+'use strict';
 
-  
+AboutController.$inject = ['$scope', 'dataService'];
 
-  angular.module('App.components.about')
-    .controller('about', function ($scope, dataService) {
-      
-        dataService.getDetails().then(function(res) {
+function AboutController($scope, dataService) {
+    $scope.currentState = "about-controller";
+    dataService.getDetails().then(function(res) {
             $scope.text = res.data;
         }, function(error) {
             $scope.error = error;
         });
-        
-      });
-}());
+}
+module.exports = AboutController;

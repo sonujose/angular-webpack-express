@@ -9,12 +9,12 @@
       $stateProvider
         .state('home', {
           templateUrl: 'client/app/components/home/home.html',
-          controller: 'home',
+          controller: 'HomeController',
           url: '/home'
         })
         .state('about', {
           templateUrl: 'client/app/components/about/about.html',
-          controller: 'about',
+          controller: 'AboutController',
           url: '/about'
         });
     });
