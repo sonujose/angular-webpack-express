@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'source-map',
   debug: true,
   entry: {
-    'vendor': './client/vendor.js',
+    'vendor': ['angular', 'angular-ui-router'],
     'app': ['./client/app/components/modules.js',
             './client/app/shared/modules.js',
             './client/app/shared/header/headerDirective.js',

@@ -46,4 +46,5 @@ function HomeController($scope, dataService) {
         },
     ];
 }
+
 module.exports = HomeController;

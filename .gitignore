@@ -1,3 +1,4 @@
 node_modules
-client/vendor/
+client/webpack-build/*.*
+client/build/*.*
 npm-debug.log
