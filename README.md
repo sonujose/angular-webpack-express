@@ -13,9 +13,6 @@ It is a full stack project for AngularJS web application which objects is:
 - Live watch need to be updated
 - Add Typescript support
 
-## Issues (Digging for a proper solution)
-- Issue on live reloading of sass files [Currently handled by gulp]
-
 ## Installation
 
 1) Create a new folder for your project, and clone this repo inside it
@@ -81,7 +78,7 @@ For styling you must use scss. The main entry for all your styles is `client/sty
 scss are organised as partials in the styles folder, containing partial folder for different types of styles , all those are imported in app.scss. Also styles for different components are put in their corresponding folders and are called from app.scss
 **note:** no need to write browser prefixes like `-webkit`, `-moz` or `-ms` it will be added automatically by `gulp-autoprefixer` for 2 latest versions of all major browsers (you can change this option in `gulpfile.js` - task `buildSass`).  
 ####3) How can I install extension
-To add an extension to your app you must install it either from `npm` or `bower`, then you just require it from `clinet/vendor.js`. 
+To add an extension to your app you must install it either from `npm`, then you just require it from `client/vendor.js` or load as dependency in webpack vendor entry. 
 If this extension has its own styles you can just `@import` it from vendor.scss  
 **note:** if you want to import `.css` file create root-relative path for it `/client/vendor/..` or `/node_modules/..`  
 ####4) How can I use mockup server  
