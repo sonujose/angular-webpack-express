@@ -10,7 +10,7 @@
     nodemon = require('gulp-nodemon'),
     notifier = require("node-notifier"),
     gutil = require('gulp-util'),
-    ngAnnotate = require('gulp-ng-annotate')
+    ngAnnotate = require('gulp-ng-annotate');
 
   /**
    * Build styles for application from SASS for
@@ -40,11 +40,14 @@
     });
   });
 
+  // Default Gulp Task
   gulp.task('default', ['buildSass', 'startServer']);
 
 }());
 
-/**Legacy gulp sass vendor code */
+
+
+/**Legacy gulp tasks */
   
   /**
    * Build styles for vendors from SASS
@@ -71,7 +74,15 @@
     //gulp.watch(['./client/main.scss', './client/styles/*.scss', './client/app/**/*.scss'], ['buildSass']);
     //gulp.watch('./client/vendor.scss', ['buildSassVendor']);
   //});
-
-  // Default Gulp Task
+/*gulp.task('compress-js', function (cb) {
+      pump([
+          gulp.src('./client/webpack-build/*.js'),
+          uglify(),
+          gulp.dest('./client/build/')
+      ],
+          cb
+      );
+  });*/
+  
   
 

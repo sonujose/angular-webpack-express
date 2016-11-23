@@ -93,4 +93,21 @@ When you've run `gulp` you automatically start the node server with express.
 If you want to add your api route - just go to the `server/routes.js` and create one (use test route as example).  
 Add json file to the `server/data/` folder and send it body in your new route with `dataLoader`, or just send whatever you want in your route.
 
+####6) Using webpack
+Here webpack is used for bundling the js files. `webpack.config.js` file bundles the entire js files into two modules app and vendor and are minified and used as reference in `index.html`.
+The output of bundled files are in the `client/webpac-build` file. if you need to test webpack bundling just run command `webpack` 
+
+####7) Analyze your webpack modules
+1) Run command
+```
+webpack --profile --json >> stats.json
+```
+2) open
+```
+http://webpack.github.io/analyse/#modules
+```
+3)upload stats.json file from your repository
+
+**HAve fun***
+
 
