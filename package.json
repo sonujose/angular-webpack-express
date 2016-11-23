@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Angular nodejs fullstack",
   "scripts": {
-    "postinstall": "bower install",
     "start": "webpack && gulp"
   },
   "author": "sonu Jose",
