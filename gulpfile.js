@@ -5,7 +5,6 @@
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
-    uglify = require('gulp-uglify'),
     nodemon = require('gulp-nodemon'),
     notifier = require("node-notifier"),
     gutil = require('gulp-util');
