@@ -5,8 +5,6 @@
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
-    source = require('vinyl-source-stream'),
-    buffer = require('vinyl-buffer'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
     nodemon = require('gulp-nodemon'),
@@ -32,20 +30,6 @@
   });
 
   /**
-   * Build styles for vendors from SASS
-   */
-  gulp.task('buildSassVendor', function () {
-    console.log('Building vendor sass');
-    gulp.src('./client/styles/vendor.scss')
-      .pipe(sass().on('error', function (err) {
-        gutil.log(gutil.colors.bgRed("Sass compile error (vendor)"), gutil.colors.bgBlue(err.message));
-        notifier.notify({title: "Sass compile error (vendor)", message: err.message });
-        this.emit("end");
-      }))
-      .pipe(gulp.dest('./client/build/'));
-  });
-
-  /**
    * Start the server and watch for changes in server folder
    */
   gulp.task('startServer', function () {
@@ -56,6 +40,25 @@
     });
   });
 
+  gulp.task('default', ['buildSass', 'startServer']);
+
+}());
+
+/**Legacy gulp sass vendor code */
+  
+  /**
+   * Build styles for vendors from SASS
+   */
+  /*gulp.task('buildSassVendor', function () {
+    console.log('Building vendor sass');
+    gulp.src('./client/styles/vendor.scss')
+      .pipe(sass().on('error', function (err) {
+        gutil.log(gutil.colors.bgRed("Sass compile error (vendor)"), gutil.colors.bgBlue(err.message));
+        notifier.notify({title: "Sass compile error (vendor)", message: err.message });
+        this.emit("end");
+      }))
+      .pipe(gulp.dest('./client/build/'));
+  });*/
 /**
  *TODO: need to add build watch using webpack for livereload after editing files  
  *Currently commenting out gulp task for watch as it throws error on live reload
@@ -70,6 +73,5 @@
   //});
 
   // Default Gulp Task
-  gulp.task('default', ['buildSass', 'buildSassVendor', 'startServer']);
+  
 
-}());
