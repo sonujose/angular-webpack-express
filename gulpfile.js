@@ -4,13 +4,11 @@
   var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
     nodemon = require('gulp-nodemon'),
     notifier = require("node-notifier"),
-    gutil = require('gulp-util'),
-    ngAnnotate = require('gulp-ng-annotate');
+    gutil = require('gulp-util');
 
   /**
    * Build styles for application from SASS for

@@ -9,7 +9,6 @@ module.exports = {
         'vendor': ['angular', 'angular-ui-router'],
         'app': ['./client/app/components/modules.js',
             './client/app/shared/modules.js',
-            './client/app/shared/directives/headerDirective.js',
             './client/app/app.modules.js',
             './client/app/routes.js',
             './client/app/dataService.js']
@@ -22,7 +21,7 @@ module.exports = {
         filename: '[name].bundle.js'
     },
     plugins: [
-        // minify bundles
+        // optimize bundled modules
         new webpack.optimize.UglifyJsPlugin({
             compress: { warnings: false },
             mangle: false,

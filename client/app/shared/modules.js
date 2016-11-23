@@ -1,5 +1,6 @@
-angular.module('App.shared', [
-  'App.shared.header'
-]);
 
-angular.module('App.shared.header', []);
+'use strict';
+
+var AppHeaderDirective = require('./directives/headerDirective');
+
+angular.module('App.shared', []).directive('appHeader', AppHeaderDirective);
