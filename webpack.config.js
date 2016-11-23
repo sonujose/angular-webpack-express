@@ -7,7 +7,7 @@ module.exports = {
     debug: true,
     entry: {
         'vendor': ['angular', 'angular-ui-router'],
-        'app': ['./client/app/app.js', './client/app/routes.js']
+        'app': ['./client/app/app.js']
     },
     resolve: {
         extensions: ['', '.ts', '.js']
