@@ -31,7 +31,7 @@ npm install --global gulp webpack
 ```
 npm start
 ```
-5) Wait untill gulp do its job, ahd when you'll see the `Server listening on port 9000` line go to `http://localhost:9000`  
+5) Wait untill gulp do its job, when you'll see toast notification `Server listening on port 9000` then go to `http://localhost:9000`  
 6) Congratulations, you've just setup your angular application!
 
 ### Basic folder structure
@@ -72,7 +72,7 @@ server.js     // Main server file which create and setup express application
 ####1) How do I start creating my own app  
 Just see angular folder structure comments and look at the existing components and shared modules.  
 It'll give you the picture of overall application structure.  
-So basically: you have main angular file `client/app.modules.js`. It contains your main app which requires `components` and `shared` modules. Components modules contains all single components of your application (like pages for example or single use directives), and shared module contains all elements of your app which will be shared across different parts of your application (like header, footer, or any reusable elements).  
+So basically: you have main angular file `client/app.modules.js`. It contains your main app which requires `components` and `shared` modules. Components modules contains all single components of your application (like pages for example or single use directives), and shared module contains all elements of your app like shared assets, directives, templates etc..
 The main point here is using modular structure so later you can just delete the folder with your module and it's gone from your app completely (with all its directives, services, styles and views). So yes, you must put all files related to the module in its own folder, even the scss.  
 
 ####2) How can I style my app  
