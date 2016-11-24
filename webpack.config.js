@@ -32,8 +32,8 @@ module.exports = {
         ],
         loaders: [
             { test: /\.ts$/, loader: 'awesome-typescript-loader', exclude: [/\.(spec|e2e)\.ts$/] },
-            { test: /\.(html|css)$/, loader: 'raw-loader' }
-            //{ test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'}
+            { test: /\.(html|css)$/, loader: 'raw-loader' },
+            { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'}
         ]
     },
     devServer: {

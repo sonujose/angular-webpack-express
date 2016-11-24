@@ -1,5 +1,5 @@
 {
-  "name":"developingnodes",
+  "name": "developingnodes",
   "version": "0.0.1",
   "description": "Angular nodejs fullstack",
   "scripts": {
@@ -13,18 +13,16 @@
     "body-parser": "^1.12.4",
     "bootstrap-sass": "^3.3.4",
     "express": "^4.12.3",
-    "gulp-sass": "^2.3.2",
     "gulp-util": "^3.0.6"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^2.2.4",
+    "css-loader": "^0.26.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.3.0",
     "gulp-debug": "^2.0.1",
     "gulp-nodemon": "^2.0.3",
     "gulp-open": "^0.3.2",
-    "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.4",
     "node-notifier": "^4.2.1",
     "node-sass": "^3.13.0",

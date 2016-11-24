@@ -2,6 +2,7 @@
 
 require('./components');
 require('./shared');
+require('../styles/app.scss');
 
 var appModule = angular.module('App', ['App.components', 'App.shared', 'ui.router']);
 
