@@ -94,7 +94,7 @@ Here webpack is used for bundling the js files. `webpack.config.js` file bundles
 The output of bundled files are in the `client/webpac-build` file. if you need to test webpack bundling just run command `webpack` 
 
 ####7) Analyze your webpack modules
-1) Run command
+1) Run 
 ```
 webpack --profile --json >> stats.json
 ```
@@ -104,6 +104,6 @@ http://webpack.github.io/analyse/#modules
 ```
 3)upload stats.json file from your repository
 
-**HAve fun**
+**HAve Fun**
 
 
