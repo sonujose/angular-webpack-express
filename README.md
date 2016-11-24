@@ -9,7 +9,6 @@ It is a full stack project for AngularJS web application which objects is:
 
 ## Future updates (We are working on it)
 - Currently sass files are compiled by gulp, need to make webpack compile sass
-- Need to update angular modules for better bundling using webpack
 - Live watch need to be updated
 - Add Typescript support
 
