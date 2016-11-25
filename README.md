@@ -6,6 +6,7 @@ It is a full stack project for AngularJS web application which objects is:
 - Provide easy to use extensibility with npm managers;
 - Mockup server for your application;
 - Supports ES2015 using Babel 
+- Supports SASS for styling you application
 - Give the basic folders and modules structure of angular application;
 
 ## Future Updates (Working on it)
