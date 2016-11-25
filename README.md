@@ -16,7 +16,7 @@ It is a full stack project for AngularJS web application which objects is:
 
 1) Create a new folder for your project, and clone this repo inside it
 ```
-git clone https://github.com/sonujose/Angularjs-Nodejs-Express-Fullstack-solution.git
+git clone https://github.com/sonujose/Angular-Node-Fullstack.git
 ```
 2) You need to have node and npm installed on your system, npm version should be grater than 2.x , Install webpack if you don't have it already. Need webpack cli for running the application 
 ```
