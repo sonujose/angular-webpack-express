@@ -7,9 +7,6 @@ It is a full stack project for AngularJS web application which objects is:
 - Create mockup server for your application;
 - Give the basic folders and modules structure of angular application;
 
-## Future updates (We are working on it)
-- Live watch need to be updated
-
 ## Installation
 
 1) Create a new folder for your project, and clone this repo inside it
