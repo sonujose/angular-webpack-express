@@ -95,7 +95,7 @@ Add json file to the `server/data/` folder and send it body in your new route wi
 
 ####6) Using webpack
 Here webpack is used for bundling the js files. `webpack.config.js` file bundles the entire js files into two modules app and vendor and are minified and used as reference in `index.html`.
-The output of bundled files are in the `client/webpac-build` file. if you need to test webpack bundling just run command `webpack` 
+The output of bundled files are in the `client/build` file. if you need to test webpack bundling just run command `webpack` 
 
 ####7) ES2015 is supported (can be upgraded to ECMA Script latest version) 
 All the js files inside app support es2015 , used babel loader as the transpiler for es2015. you can upgrade to latest ECMAScipt version in `package.json`, change the `presets` value of `babel` from`es2015` to `latest`
