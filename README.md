@@ -104,7 +104,7 @@ webpack --profile --json >> stats.json
 ```
 http://webpack.github.io/analyse/#modules
 ```
-3)upload stats.json file from your repository
+3) upload stats.json file from your repository
 
 **HAve Fun**
 
