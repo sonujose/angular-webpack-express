@@ -2,10 +2,14 @@
 **(Webpack, ES2015, Express, Sass, Babel)**  
 
 It is a full stack project for AngularJS web application which objects is:
-- Organize all assets with webpack;
+- Webpack build and bundle all the assests.
 - Provide easy to use extensibility with npm managers;
-- Create mockup server for your application;
+- Mockup server for your application;
+- Supports ES2015 using Babel 
 - Give the basic folders and modules structure of angular application;
+
+## Future Updates (Working on it)
+- Integrate MongoDB
 
 ## Installation
 
