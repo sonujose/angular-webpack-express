@@ -13,18 +13,25 @@ module.exports = {
         extensions: ['', '.ts', '.js']
     },
     output: {
-        path: './client/webpack-build',
-        filename: '[name].bundle.js'
+        path: './client/build',
+        filename: '[name].bundle.js',
+        chunkFilename: '[name]_[chunkhash].js'
     },
     plugins: [
-        // optimize bundled modules
+        // common modules shared between entry points.
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "vendor",
+            minChunks: Infinity
+        }),
+        // optimize bundled chunk modules
         new webpack.optimize.UglifyJsPlugin({
             compress: { warnings: false },
+            // default is true, on mangling enabled will break angular dependency injection, so is set to false
             mangle: false,
-            sourcemap: false,
+            sourcemap: true,
             minimize: true,
             comments: false
-        })
+        })  
     ],
     module: {
         preLoaders: [
@@ -36,6 +43,7 @@ module.exports = {
             { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'}
         ]
     },
+    // configures webpack-dev-server
     devServer: {
         historyApiFallback: true
     }
