@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var path = require('path');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     devtool: 'source-map',
@@ -47,6 +46,12 @@ module.exports = {
     },
     // configures webpack-dev-server
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        // redirectts to api server on api calls
+        proxy: {
+            "/api/*": {
+                target: "http://localhost:9000"
+            }
+        }
     }
 };
