@@ -1,4 +1,4 @@
-# AngularJS Node js full stack kit
+# AngularJS Nodejs full-stack Kit
 **(Webpack, ES2015, Express, Sass, Babel)**  
 
 It is a full stack project for AngularJS web application which objects is:
@@ -18,26 +18,29 @@ It is a full stack project for AngularJS web application which objects is:
 ```
 git clone https://github.com/sonujose/Angular-Node-Fullstack.git
 ```
-2) You need to have node and npm installed on your system, npm version should be grater than 2.x , Install webpack if you don't have it already. Need webpack cli for running the application 
+2) You need to have node and npm installed on your system, `npm version should be grater than 3.x` [2.x version may create issues in loading some dependencies]
+   To update npm version run `npm install npm@latest -g`
+
+3) Install webpack if you don't have it already. Need webpack cli for running the application 
 ```
 npm install --global webpack
 ```
-3) Install all npm dependencies
+4) Install all npm dependencies
 ```
 npm install
 ```
-4) Run the api server 
+5) Run the api server 
 ```
 npm test
 ```
-5) Run the application (Webpack-dev-server) [open another terminal]
+6) Run the application (Webpack-dev-server) [open another terminal]
 ```
 npm start
 ```
-6) Will be directed to `http://localhost:8080`, wait untill webpack bundles all your files and server.
+7) Wait untill webpack bundles all your files and server, Browser will open `http://localhost:8080`, 
 [Your api server will be running at localhost:9000, webpack-dev-server will autimatically navigate to server on /api/ calls, you dont need to worry]
 
-6) Congratulations, you've just setup your Angular Node fullstack application!
+8) Congratulations, you've just setup your Angular Node fullstack application!
 
 ### Basic folder structure
 Some job for Captain Obvious

@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
     devtool: 'source-map',
@@ -30,7 +31,8 @@ module.exports = {
             sourcemap: true,
             minimize: true,
             comments: false
-        })  
+        }),
+        new OpenBrowserPlugin()  
     ],
     module: {
         preLoaders: [
