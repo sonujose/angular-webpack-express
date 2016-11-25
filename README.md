@@ -18,13 +18,13 @@ It is a full stack project for AngularJS web application which objects is:
 ```
 git clone https://github.com/sonujose/Angularjs-Nodejs-Express-Fullstack-solution.git
 ```
-2) Install all npm dependencies
-```
-npm install
-```
-3) Install gulp and webpack if you don't have it already.
+2) Install gulp and webpack if you don't have it already. Need webpack and gulp cli for running the application 
 ```
 npm install --global gulp webpack
+```
+3) Install all npm dependencies
+```
+npm install
 ```
 4) Run the application (Webpack and gulp)
 ```
