@@ -4,9 +4,9 @@ AboutController.$inject = ['$scope', 'dataService'];
 
 function AboutController($scope, dataService) {
     $scope.currentState = "about-controller";
-    dataService.getDetails().then(function(res) {
+    dataService.getDetails().then((res) => {
             $scope.text = res.data;
-        }, function(error) {
+        }, (error) => {
             $scope.error = error;
         });
 }

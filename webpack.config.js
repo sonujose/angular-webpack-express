@@ -37,7 +37,8 @@ module.exports = {
         preLoaders: [
             { test: /\.js$/, loader: 'source-map-loader' }
         ],
-        loaders: [
+        loaders: [ 
+            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader", include: path.join(__dirname, 'client/app') },
             { test: /\.ts$/, loader: 'awesome-typescript-loader', exclude: [/\.(spec|e2e)\.ts$/] },
             { test: /\.(html|css)$/, loader: 'raw-loader' },
             { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
