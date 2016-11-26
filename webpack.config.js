@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     devtool: 'source-map',
@@ -15,25 +16,10 @@ module.exports = {
     output: {
         path: './client/build',
         filename: '[name].bundle.js',
-        chunkFilename: '[name]_[chunkhash].js'
+        chunkFilename: '[name]_[chunkhash].js',
+        //hotUpdateChunkFilename: 'hot/[name].hot-update.js',
+        //hotUpdateMainFilename: 'hot/[hash].hot-update.json'
     },
-    plugins: [
-        // common modules shared between entry points.
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "vendor",
-            minChunks: Infinity
-        }),
-        // optimize bundled chunk modules
-        new webpack.optimize.UglifyJsPlugin({
-            compress: { warnings: false },
-            // default is true, on mangling enabled will break angular dependency injection, so is set to false
-            mangle: false,
-            sourcemap: true,
-            minimize: true,
-            comments: false
-        }),
-        new OpenBrowserPlugin()  
-    ],
     module: {
         preLoaders: [
             { test: /\.js$/, loader: 'source-map-loader' }
@@ -41,11 +27,28 @@ module.exports = {
         loaders: [ 
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader", include: path.join(__dirname, 'client/app') },
             { test: /\.ts$/, loader: 'awesome-typescript-loader', exclude: [/\.(spec|e2e)\.ts$/] },
-            { test: /\.(html|css)$/, loader: 'raw-loader' },
+            { test: /\.(html)$/, loader: 'raw-loader' },
+            { test: /\.css$/, loader: 'style-loader!css-loader' },
             { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
             { test: /\.(jpg|png)$/, loader: 'url?limit=25000'}
         ]
     },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "vendor",
+            minChunks: Infinity
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: { warnings: false },
+            mangle: false,
+            sourcemap: true,
+            minimize: true,
+            comments: false
+        }),
+        new OpenBrowserPlugin(),
+        //new webpack.HotModuleReplacementPlugin()
+        new ExtractTextPlugin("app.bundle.css")  
+    ],
     // configures webpack-dev-server
     devServer: {
         historyApiFallback: true,

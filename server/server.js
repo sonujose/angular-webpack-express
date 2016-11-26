@@ -15,6 +15,6 @@ app.use(bodyParser.json());
 
 require('./routes')(app);
 
-app.listen(9000);
+app.listen(8080);
 
-console.log('API server is listening on port 9000');
+console.log('Server is listening on port 8080');

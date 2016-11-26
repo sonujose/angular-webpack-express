@@ -5,11 +5,11 @@
 */
 @import 'vendors/module';
 
-/* Application scss */
-@import 'client/app/components/about/about';
-@import 'client/app/components/home/home';
-
 /* Generic application scss */
 @import 'config/module';
 @import 'component/module';
+
+/* Application scss */
+@import 'client/app/components/about/about';
+@import 'client/app/components/home/home';
 
