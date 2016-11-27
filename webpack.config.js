@@ -28,8 +28,8 @@ module.exports = {
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader", include: path.join(__dirname, 'client/app') },
             { test: /\.ts$/, loader: 'awesome-typescript-loader', exclude: [/\.(spec|e2e)\.ts$/] },
             { test: /\.(html)$/, loader: 'raw-loader' },
-            { test: /\.css$/, loader: 'style-loader!css-loader' },
-            { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'},
+            { test: /\.scss$/, loader: ExtractTextPlugin.extract("css-loader!sass-loader")},
+            //{ test: /\.scss$/, loader: "style-loader!css-loader!sass-loader"},
             { test: /\.(jpg|png)$/, loader: 'url?limit=25000'}
         ]
     },
@@ -47,7 +47,7 @@ module.exports = {
         }),
         new OpenBrowserPlugin(),
         //new webpack.HotModuleReplacementPlugin()
-        new ExtractTextPlugin("app.bundle.css")  
+        new ExtractTextPlugin("styles.bundle.css")  
     ],
     // configures webpack-dev-server
     devServer: {
