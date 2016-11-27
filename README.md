@@ -29,16 +29,15 @@ npm install --global webpack
 ```
 npm install
 ```
-5) Run the api server 
+5) Run the server 
 ```
 npm test
 ```
-6) Run the application (Webpack-dev-server) [open another terminal]
+6) Run the application (Webpack --watch) [open another terminal]
 ```
 npm start
 ```
-7) Wait untill webpack bundles all your files and server, Browser will open `http://localhost:8080`, 
-[Your api server will be running at localhost:9000, webpack-dev-server will autimatically navigate to server on /api/ calls, you dont need to worry]
+7) Wait untill webpack bundles all your files and server, Browser will open `http://localhost:8080`
 
 8) Congratulations, you've just setup your Angular Node fullstack application!
 
